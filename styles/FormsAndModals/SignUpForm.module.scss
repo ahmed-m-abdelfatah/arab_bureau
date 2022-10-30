@@ -1,0 +1,17 @@
+@use '../variables' as *;
+
+.signup {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  background-color: $secondary-bg;
+
+  .container {
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+  }
+}

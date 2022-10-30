@@ -1,0 +1,255 @@
+@use './variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo&display=swap');
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: $main-blue;
+}
+
+::-webkit-selection {
+  background: $main-blue;
+}
+
+::selection {
+  background: $main-blue;
+  color: #fff;
+}
+
+$custom-width: 100, 75, 50, 25;
+@each $i in $custom-width {
+  .w-sm-#{$i} {
+    @media (max-width: $mobileScreen) {
+      width: #{$i}#{'%'};
+    }
+  }
+}
+
+html {
+  scrollbar-width: none;
+  font-size: 16px;
+  scrollbar-color: transparent transparent !important;
+  scroll-behavior: smooth;
+
+  @media (max-width: 992px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 767) {
+    font-size: 12px;
+  }
+}
+
+body {
+  font-family: 'Cairo', sans-serif;
+}
+
+nav {
+  z-index: $max-z-index;
+  text-transform: capitalize;
+
+  .nav-link.active,
+  .nav-link:hover {
+    color: $main-blue !important;
+  }
+
+  &.scroll,
+  &.mobile {
+    background-color: #fff !important;
+    border-bottom: 1px solid;
+    text-align: center;
+
+    button {
+      background-color: rgb(0 0 0 / 60%);
+    }
+
+    .nav-link {
+      color: #000;
+    }
+  }
+
+  .select-language {
+    outline: none;
+    cursor: pointer;
+    margin: 0.2rem;
+  }
+}
+
+.intro {
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+
+  @for $var from 1 through 4 {
+    &-#{$var} {
+      background: url(../public/img/bg-#{$var}.jpg);
+    }
+  }
+
+  .transparent {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem;
+  top: 80%;
+  #{$left}: 0;
+  transform: translateY(-100%);
+  background-color: black;
+}
+
+.carousel-control-next {
+  transform: translateY(0);
+}
+
+.main-heading {
+  text-align: center;
+  margin-bottom: 4rem;
+  user-select: none;
+
+  &:hover h3::after {
+    width: 10%;
+  }
+
+  h3 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    position: relative;
+    font-weight: 700;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      #{$left}: 50%;
+      transform: translate(-50%, -50%);
+      width: 5%;
+      height: 2px;
+      border-radius: 1px;
+      background-color: #000;
+      transition: $main-transition;
+    }
+  }
+
+  p {
+    text-transform: uppercase;
+  }
+}
+
+.about {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+
+  .vision-points {
+    display: flex;
+    position: relative;
+
+    i {
+      display: inline-block !important;
+      margin-#{$right}: 1rem;
+      margin-top: 0.5rem;
+      color: $main-blue;
+
+      &:nth-child(2) {
+        position: absolute;
+        font-weight: 900;
+        opacity: 0.1;
+        color: gray;
+        font-size: 3em;
+        top: 30%;
+        #{$left}: 5%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+}
+
+.activities {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  background-color: $secondary-bg;
+
+  li {
+    padding: 0.625rem 0;
+    font-size: 1.2rem;
+  }
+}
+
+.projects {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+
+  .item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .caption {
+      position: absolute;
+      background-color: white;
+      padding: 0.625rem;
+      width: 80%;
+      bottom: 1.5625rem;
+      text-align: center;
+      min-height: 5em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.contact {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  background-color: $secondary-bg;
+  text-align: center;
+
+  .box {
+    h4 {
+      text-transform: capitalize;
+    }
+
+    i {
+      font-size: 2rem;
+      padding-bottom: 1rem;
+      color: $main-blue;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      color: #000;
+    }
+  }
+}
+
+.footer {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom / 4;
+  background-color: $main-blue;
+  text-align: center;
+  color: #fff;
+
+  h1 {
+    text-transform: uppercase;
+  }
+
+  i {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  a {
+    color: #fff;
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "ext": "js json",
+  "ignore": ["node_modules", ".next"],
+  "verbose": true,
+  "watch": ["backend/**/*", "app.js"]
+}

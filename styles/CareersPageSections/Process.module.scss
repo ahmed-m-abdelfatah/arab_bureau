@@ -1,0 +1,63 @@
+@use '../variables' as *;
+
+.Process {
+  padding-top: $padding-top;
+  padding-bottom: $padding-bottom;
+  background-color: $secondary-bg;
+
+  .process-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding-top: $padding-top / 4;
+    padding-bottom: $padding-bottom / 4;
+    z-index: 1;
+
+    @media (max-width: $mobileScreen) {
+      flex-direction: column;
+    }
+
+    .link-line {
+      position: absolute;
+      height: 2px;
+      background-color: $magenta;
+      filter: blur(0.6px);
+      width: 95%;
+      top: 40%;
+      left: 2%;
+      z-index: -1;
+
+      @media (max-width: $mobileScreen) {
+        display: none;
+      }
+    }
+
+    .process-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      &__number {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        width: 3.25rem;
+        height: 3.25rem;
+        margin: 1rem auto;
+        border-radius: 50%;
+        border: 2px solid $yellow;
+        text-align: center;
+      }
+
+      &:last-child {
+        .process-item__number {
+          background-color: $magenta;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

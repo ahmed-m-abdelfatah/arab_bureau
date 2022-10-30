@@ -1,0 +1,19 @@
+@use '../variables' as *;
+
+.open-positions {
+  padding-top: $padding-top * 2;
+  padding-bottom: $padding-bottom * 2;
+}
+
+.bgc-blue {
+  background-color: $main-blue;
+}
+
+.secondary-bg {
+  background-color: $secondary-bg;
+}
+
+.required::after {
+  content: '*';
+  color: red;
+}

@@ -1,0 +1,6 @@
+@use '../variables' as *;
+
+.protected-route {
+  min-height: 100vh;
+  background-color: $secondary-bg;
+}

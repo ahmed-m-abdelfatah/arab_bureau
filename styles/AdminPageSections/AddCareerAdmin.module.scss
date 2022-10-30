@@ -1,0 +1,10 @@
+@use '../variables' as *;
+
+.add-career {
+  padding-top: $padding-top;
+  min-height: 100vh;
+  display: flex;
+  justify-self: center;
+  background-color: $secondary-bg;
+  text-align: center;
+}
