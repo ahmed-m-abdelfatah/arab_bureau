@@ -3,6 +3,7 @@
 >   - HTML
 >   - CSS
 >   - JS
+>   - Bootstrap
 >   - Gulp.js
 
 > - version2.0
