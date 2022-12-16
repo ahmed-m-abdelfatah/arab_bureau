@@ -1,9 +1,4 @@
 ## arab_bureau
 
-### v2.0
-
-view live: [Click Here](https://arab-bureau-v2.herokuapp.com)
-
-### tasks
-
+### version2.0 tasks
 view live: [Click Here](./TASKS.md)
