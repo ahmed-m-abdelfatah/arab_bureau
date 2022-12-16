@@ -1,4 +1,4 @@
-(function () {
+function lightBox() {
   const imgs = [...document.querySelectorAll('.projects img')];
   const lightbox = document.querySelector('.projects .light-box');
   const lightboxItem = document.querySelector('.projects .light-box .light-box-item');
@@ -69,4 +69,5 @@
         break;
     }
   }
-})();
+}
+lightBox();

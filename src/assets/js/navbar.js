@@ -1,4 +1,4 @@
-(function () {
+function navbar() {
   const nav = document.querySelector('nav');
   const navLinks = document.querySelectorAll('nav ul li a');
   const homeLink = document.querySelector('.navbar-brand');
@@ -82,4 +82,6 @@
       }
     });
   });
-})();
+}
+
+navbar();

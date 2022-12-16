@@ -7,8 +7,8 @@ $main-transition: 0.3s ease-in-out;
 $main-blue: #0066cc;
 $secondary-bg: #ececec;
 $max-z-index: 99999;
-$left: left;
-$right: right;
+$left: right;
+$right: left;
 
 ::-webkit-scrollbar {
   width: 0;
@@ -16,6 +16,10 @@ $right: right;
 }
 ::-webkit-scrollbar-thumb {
   background: transparent;
+}
+
+ul {
+  padding: 0;
 }
 
 html {
@@ -41,7 +45,6 @@ body {
 header {
   nav {
     z-index: $max-z-index;
-    text-transform: capitalize;
 
     .nav-link.active,
     .nav-link:hover {
@@ -119,8 +122,8 @@ header {
     &::after {
       content: '';
       position: absolute;
-      bottom: -0.5rem;
-      #{$left}: 50%;
+      bottom: -1rem;
+      left: 50%;
       transform: translate(-50%, -50%);
       width: 5%;
       height: 2px;
@@ -132,6 +135,7 @@ header {
 
   p {
     text-transform: uppercase;
+    margin-top: 1.5rem;
   }
 }
 
@@ -217,6 +221,7 @@ header {
       background-position: center center;
       background-repeat: no-repeat;
       display: flex;
+      flex-direction: row-reverse;
       align-items: center;
       justify-content: space-between;
       position: relative;
@@ -264,7 +269,7 @@ header {
 
 .footer {
   padding-top: $padding-top;
-  padding-bottom: $padding-bottom / 4;
+  padding-bottom: calc($padding-bottom / 4);
   background-color: $main-blue;
   text-align: center;
   color: #fff;

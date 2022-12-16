@@ -9,7 +9,6 @@
       english: 'English',
       arabic: 'Arabic',
       french: 'French',
-      about: 'about',
       aboutDesc: `
       The Arab Bureau For Design And Engineering Consultancy Was Established In 1898. And Became The Main Official
       Consultant Office For Egypt In 1965.
@@ -93,7 +92,6 @@
       english: 'الانجليزية',
       arabic: 'العربية',
       french: 'الفرنسية',
-      about: 'من نحن',
       aboutDesc: `
       تأسس المكتب العربي للتصميمات والاستشارات الهندسية عام 1898. وأصبح المكتب الاستشاري الرسمي الرئيسي لمصر عام 1965.
       <br><br>
@@ -169,7 +167,6 @@
       english: 'Anglais',
       arabic: 'Arabe',
       french: 'Français',
-      about: 'about',
       aboutDesc: `
       Le Bureau arabe de conseil en conception et en ingénierie a été créé en 1898. Et est devenu le principal responsable
       Bureau de consultant pour l'Egypte en 1965.
@@ -288,10 +285,10 @@
     const head = document.head;
     let oldSheets;
 
-    const rtlSheets = `<link rel="stylesheet" href="./assets/css/bootstrap.rtl.min.css" class="rtl">
-    <link rel="stylesheet" href="./assets/css/style.rtl.min.css" class="rtl">`;
-    const ltrSheets = `<link rel="stylesheet" href="./assets/css/bootstrap.min.css" class="ltr">
-    <link rel="stylesheet" href="./assets/css/style.min.css" class="ltr">`;
+    const rtlSheets = `<link rel="stylesheet" href="./assets/lib/styles/bootstrap.rtl.min.css" class="rtl">
+    <link rel="stylesheet" href="./assets/css/all.rtl.min.css" class="rtl">`;
+    const ltrSheets = `<link rel="stylesheet" href="./assets/lib/styles/bootstrap.min.css" class="ltr">
+    <link rel="stylesheet" href="./assets/css/all.min.css" class="ltr">`;
 
     switch (language) {
       case 'ar': {
